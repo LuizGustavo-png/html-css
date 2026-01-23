@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexible Box</title>
     <style>
+        /*
+        Flex: 0 1 auto ou Flex: initial
+        Flex: 0 0 auto ou Flex: none
+        Flex: 1 1 auto ou Flex: auto
+        Flex: 3 ou Flex: 3 1 auto 
+        */
         div.container {
             background-color: lightsalmon;
             display: flex;
@@ -15,7 +21,6 @@
             background-color: lightblue;
             border: 1px solid black;
             text-align: center;
-            flex-basis: 200px;
         }
 
         div.item:hover {
@@ -24,18 +29,27 @@
         }
 
         div#cxA {
-           flex-shrink: 0;
+           /* flex-shrink: 0;
            flex-grow: 1; 
+           flex-basis: 200px; */
+
+           flex: 1 0 200px;
         }
 
         div#cxB {
-            flex-shrink: 0;
+            /* flex-shrink: 0;
             flex-grow: 1;
+            flex-basis: 150px; */
+
+            flex: 1 1 150px;
         }
 
         div#cxC {
-           flex-shrink: 0;
-           flex-grow: 1; 
+           /* flex-shrink: 0;
+           flex-grow: 1;
+           flex-basis: auto; */
+
+           flex: 1 8 auto;
         }
     </style>
 </head>
